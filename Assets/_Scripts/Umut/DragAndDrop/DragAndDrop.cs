@@ -134,8 +134,6 @@ public class DragAndDrop : MonoBehaviour
                             _pickedUpUnit.transform.position =
                                 grid.GetWorldPositionCenterOfGrid(gridCell.x, gridCell.z) + new Vector3(0, yAdjustment, 0);
                             gridCell.SetPlacedUnit(_pickedUpUnit);
-                            lookForTeamMates();
-                            _pickedUpUnit.transform.SetParent(teammates.transform);
                             if (_lastPickedGrid != gridCell)
                             {
                                 _lastPickedGrid.ClearPlacedUnit();
